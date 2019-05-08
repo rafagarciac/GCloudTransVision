@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,7 +15,11 @@ namespace GCloudTransVisionAPI.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            return new string[] { "value1", "value2" };
+            //foreach (DictionaryEntry e in System.Environment.GetEnvironmentVariables())
+            //{
+            //    Console.WriteLine(e.Key + ":" + e.Value);
+            //}
+            return new string[] { Environment.GetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS") };
         }
 
         // GET api/values/5

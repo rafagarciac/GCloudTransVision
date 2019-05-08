@@ -14,6 +14,7 @@ namespace GCloudTransVisionAPI
     {
         public static void Main(string[] args)
         {
+            Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", "/home/rafa/Downloads/TranslateAPI_Credentials.json");
             CreateWebHostBuilder(args).Build().Run();
         }
 
